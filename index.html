@@ -11,20 +11,20 @@
 <body>
     <script src="scripts.js"></script>
 
-    <div class="md:container md:mx-auto py-4 flex">
-        <div class="">
-            <div class="flex p-6 font-mono">
+    <div class="py-4 flex">
+        <div class="px-6">
+            <div class="flex p-6 font-mono" id="detailArt1">
                 <div class="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
                     <img src="img/polo-ralph-lauren-cintre-coton-pique.jpeg" alt="" class="absolute z-10 inset-0 w-full h-full object-cover rounded-lg"
                         loading="lazy" />
                 </div>
                 <form class="flex-auto pl-6">
-                    <div class="relative flex flex-wrap items-baseline pb-6 before:bg-black before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
+                    <div class="relative flex flex-wrap items-baseline pb-6 before:bg-sky-900 before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
                         <h1 class="relative w-full flex-none mb-2 text-2xl font-semibold text-white">
-                            Retro Shoe
+                            Polo Ralph
                         </h1>
                         <div class="relative text-lg text-white">
-                            $89.00
+                            <span id="priceArt1">25000</span><span> FCFA</span>
                         </div>
                         <div class="relative uppercase text-teal-400 ml-3">
                             In stock
@@ -70,49 +70,47 @@
                     </div>
                     <div class="flex space-x-2 mb-4 text-sm font-medium">
                         <div class="flex space-x-4">
-                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border-2 border-black bg-teal-400 text-black"
-                                type="submit">
+                            <button id="minusArt1" class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border border-slate-200 text-slate-900"
+                                type="button" onclick="decrementArt(1)">
                                 -
                             </button>
                             <button class="flex-none flex items-center justify-center w-10 h-10 text-black" type="button"
                                 aria-label="Like">
-                                <span width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <span id="nbrArt1" width="20" height="20" fill="currentColor" aria-hidden="true">
                                     1
                                 </span>
                             </button>
-                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border border-slate-200 text-slate-900"
-                                type="button">
+                            <button id="plusArt" class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border-2 border-black bg-teal-400 text-black" 
+                                type="button" onclick="incrementArt(1)">
                                 +
                             </button>
-                            <button class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
-                                <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                            <button id="likeArt1" class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+                                <svg width="20" height="20" fill="currentColor" class="hover:fill-sky-900" aria-hidden="true" onclick="likeArt(1)">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                                 </svg>
                             </button>
                             <button class="flex-none flex items-center justify-center w-30 h-10 text-black cursor-pointer"
-                                aria-label="Like">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                aria-label="Like" onclick="removeArt(1)">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 hover:fill-red-500">
                                     <path d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z" />
                                     <path fill-rule="evenodd" d="m3.087 9 .54 9.176A3 3 0 0 0 6.62 21h10.757a3 3 0 0 0 2.995-2.824L20.913 9H3.087Zm6.133 2.845a.75.75 0 0 1 1.06 0l1.72 1.72 1.72-1.72a.75.75 0 1 1 1.06 1.06l-1.72 1.72 1.72 1.72a.75.75 0 1 1-1.06 1.06L12 15.685l-1.72 1.72a.75.75 0 1 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                                 </svg>                                                           
                             </button>
                         </div>
                     </div>
-                    <p class="text-xs leading-6 text-slate-500">
-                        Free shipping on all continental US orders.
-                    </p>
+                    <hr>
                 </form>
             </div>
-            <div class="flex p-6 font-mono">
-                <div
-                    class="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
+            <div class="flex p-6 font-mono" id="detailArt2">
+                <div class="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
                     <img src="img/article1.jpg" alt="" class="absolute z-10 inset-0 w-full h-full object-cover rounded-lg">
                 </div>
                 <form class="flex-auto pl-6">
-                    <div
-                        class="relative flex flex-wrap items-baseline pb-6 before:bg-black before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
+                    <div class="relative flex flex-wrap items-baseline pb-6 before:bg-sky-900 before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
                         <h1 class="relative w-full flex-none mb-2 text-2xl font-semibold text-white">Retro Shoe</h1>
-                        <div class="relative text-lg text-white">$89.00</div>
+                        <div class="relative text-lg text-white">
+                            <span id="priceArt2">40000</span><span> FCFA</span>
+                        </div>
                         <div class="relative uppercase text-teal-400 ml-3">In stock</div>
                     </div>
                     <div class="flex items-baseline my-6">
@@ -163,49 +161,47 @@
                     </div>
                     <div class="flex space-x-2 mb-4 text-sm font-medium">
                         <div class="flex space-x-4">
-                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border-2 border-black bg-teal-400"
-                                type="submit">
+                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border border-slate-200 text-slate-900"
+                                type="button" onclick="decrementArt(2)">
                                 -
                             </button>
                             <button class="flex-none flex items-center justify-center w-10 h-10 text-black" type="button"
                                 aria-label="Like">
-                                <span width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <span id="nbrArt2" width="20" height="20" fill="currentColor" aria-hidden="true">
                                     1
                                 </span>
                             </button>
-                            <button
-                                class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border border-slate-200 text-slate-900"
-                                type="submit">
+                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border-2 border-black bg-teal-400"
+                                type="button" onclick="incrementArt(2)">
                                 +
                             </button>
-                            <button class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
-                                <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                            <button id="likeArt2" class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+                                <svg width="20" height="20" fill="currentColor" aria-hidden="true" class="hover:fill-sky-900" onclick="likeArt(2)">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                                 </svg>
                             </button>
                             <button class="flex-none flex items-center justify-center w-30 h-10 text-black cursor-pointer"
-                                aria-label="Like">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                aria-label="Like" onclick="removeArt(2)">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 hover:fill-red-500">
                                     <path d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z" />
                                     <path fill-rule="evenodd" d="m3.087 9 .54 9.176A3 3 0 0 0 6.62 21h10.757a3 3 0 0 0 2.995-2.824L20.913 9H3.087Zm6.133 2.845a.75.75 0 0 1 1.06 0l1.72 1.72 1.72-1.72a.75.75 0 1 1 1.06 1.06l-1.72 1.72 1.72 1.72a.75.75 0 1 1-1.06 1.06L12 15.685l-1.72 1.72a.75.75 0 1 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                                 </svg>                                                           
                             </button>
                         </div>
                     </div>
-                    <p class="text-xs leading-6 text-slate-500">
-                        Free shipping on all continental US orders.
-                    </p>
+                    <hr>
                 </form>
             </div>
-            <div class="flex p-6 font-mono">
-                <div
-                    class="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
+            <div class="flex p-6 font-mono" id="detailArt3">
+                <div class="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
                     <img src="img/pantalon.jpg" alt="" class="absolute z-10 inset-0 w-full h-full object-cover rounded-lg">
                 </div>
                 <form class="flex-auto pl-6">
-                    <div class="relative flex flex-wrap items-baseline pb-6 before:bg-black before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
+                    <div class="relative flex flex-wrap items-baseline pb-6 before:bg-sky-900 before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
                         <h1 class="relative w-full flex-none mb-2 text-2xl font-semibold text-white">Retro Shoe</h1>
-                        <div class="relative text-lg text-white">$89.00</div>
+                        <div class="relative text-lg text-white">
+                            <span id="priceArt3">18500</span><span> FCFA</span>
+                        </div>
                         <div class="relative uppercase text-teal-400 ml-3">In stock</div>
                     </div>
                     <div class="flex items-baseline my-6">
@@ -248,43 +244,43 @@
                     </div>
                     <div class="flex space-x-2 mb-4 text-sm font-medium">
                         <div class="flex space-x-4">
-                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border-2 border-black bg-teal-400"
-                                type="submit">
+                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border border-slate-200 text-slate-900"
+                                type="button" onclick="decrementArt(3)">
                                 -
                             </button>
                             <button class="flex-none flex items-center justify-center w-10 h-10 text-black" type="button"
                                 aria-label="Like">
-                                <span width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <span id="nbrArt3" width="20" height="20" fill="currentColor" aria-hidden="true">
                                     1
                                 </span>
                             </button>
-                            <button
-                                class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border border-slate-200 text-slate-900"
-                                type="submit">
+                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border-2 border-black bg-teal-400"
+                                type="button" onclick="incrementArt(3)">
                                 +
                             </button>
-                            <button class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
-                                <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                            <button id="likeArt3" class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+                                <svg width="20" height="20" fill="currentColor" aria-hidden="true" class="hover:fill-sky-900" onclick="likeArt(3)">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                                 </svg>
                             </button>
                             <button class="flex-none flex items-center justify-center w-30 h-10 text-black cursor-pointer"
-                                aria-label="Like">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                aria-label="Like" onclick="removeArt(3)">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 hover:fill-red-500">
                                     <path d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z" />
                                     <path fill-rule="evenodd" d="m3.087 9 .54 9.176A3 3 0 0 0 6.62 21h10.757a3 3 0 0 0 2.995-2.824L20.913 9H3.087Zm6.133 2.845a.75.75 0 0 1 1.06 0l1.72 1.72 1.72-1.72a.75.75 0 1 1 1.06 1.06l-1.72 1.72 1.72 1.72a.75.75 0 1 1-1.06 1.06L12 15.685l-1.72 1.72a.75.75 0 1 1-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                                 </svg>                                                           
                             </button>
                         </div>
                     </div>
-                    <p class="text-xs leading-6 text-slate-500">
-                        Free shipping on all continental US orders.
-                    </p>
+                    <hr>
                 </form>
             </div>
         </div>
-        <div class="">
-            <div class="">ihiuhiuk</div>
+        <div class="px-6">
+            <span>Votre Panier</span>
+            <span>
+                Total : <b id="total">83500</b><b> FCFA</b>
+            </span>
         </div>
     </div>
 </body>
