@@ -8,11 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="font-semibold">
     <script src="scripts.js"></script>
-
-    <div class="py-4 flex">
-        <div class="px-6">
+    <div class="text-center pt-8">
+        <span class="p-3 border border-2">Details du panier</span>
+    </div>
+    <div class="lg:grid grid-cols-6 gap-4 w-auto sm:flex">
+        <div class="p-6 col-start-2 col-span-3 sm:flex-none">
             <div class="flex p-6 font-mono" id="detailArt1">
                 <div class="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
                     <img src="img/polo-ralph-lauren-cintre-coton-pique.jpeg" alt="" class="absolute z-10 inset-0 w-full h-full object-cover rounded-lg"
@@ -20,14 +22,14 @@
                 </div>
                 <form class="flex-auto pl-6">
                     <div class="relative flex flex-wrap items-baseline pb-6 before:bg-sky-900 before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
-                        <h1 class="relative w-full flex-none mb-2 text-2xl font-semibold text-white">
+                        <h1 class="relative w-full flex-none mb-2 text-2xl text-white">
                             Polo Ralph
                         </h1>
                         <div class="relative text-lg text-white">
                             <span id="priceArt1">25000</span><span> FCFA</span>
                         </div>
                         <div class="relative uppercase text-teal-400 ml-3">
-                            In stock
+                            En stock
                         </div>
                     </div>
                     <div class="flex items-baseline my-6">
@@ -70,7 +72,7 @@
                     </div>
                     <div class="flex space-x-2 mb-4 text-sm font-medium">
                         <div class="flex space-x-4">
-                            <button id="minusArt1" class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border border-slate-200 text-slate-900"
+                            <button id="minusArt1" class="px-6 h-10 w-auto uppercase tracking-wider border border-slate-200 text-slate-900"
                                 type="button" onclick="decrementArt(1)">
                                 -
                             </button>
@@ -80,11 +82,11 @@
                                     1
                                 </span>
                             </button>
-                            <button id="plusArt" class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border-2 border-black bg-teal-400 text-black" 
+                            <button id="plusArt" class="px-6 h-10 w-auto uppercase tracking-wider border-2 border-black bg-teal-400 text-black" 
                                 type="button" onclick="incrementArt(1)">
                                 +
                             </button>
-                            <button id="likeArt1" class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+                            <button id="likeArt1" class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200 hover:border-red-500" type="button" aria-label="Like">
                                 <svg width="20" height="20" fill="currentColor" class="hover:fill-sky-900" aria-hidden="true" onclick="likeArt(1)">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                                 </svg>
@@ -107,11 +109,11 @@
                 </div>
                 <form class="flex-auto pl-6">
                     <div class="relative flex flex-wrap items-baseline pb-6 before:bg-sky-900 before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
-                        <h1 class="relative w-full flex-none mb-2 text-2xl font-semibold text-white">Retro Shoe</h1>
+                        <h1 class="relative w-full flex-none mb-2 text-2xl text-white">Retro Shoe</h1>
                         <div class="relative text-lg text-white">
                             <span id="priceArt2">40000</span><span> FCFA</span>
                         </div>
-                        <div class="relative uppercase text-teal-400 ml-3">In stock</div>
+                        <div class="relative uppercase text-teal-400 ml-3">En stock</div>
                     </div>
                     <div class="flex items-baseline my-6">
                         <div class="space-x-3 flex text-sm font-medium">
@@ -161,7 +163,7 @@
                     </div>
                     <div class="flex space-x-2 mb-4 text-sm font-medium">
                         <div class="flex space-x-4">
-                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border border-slate-200 text-slate-900"
+                            <button class="px-6 h-10 w-auto uppercase tracking-wider border border-slate-200 text-slate-900"
                                 type="button" onclick="decrementArt(2)">
                                 -
                             </button>
@@ -171,11 +173,11 @@
                                     1
                                 </span>
                             </button>
-                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border-2 border-black bg-teal-400"
+                            <button class="px-6 h-10 w-auto uppercase tracking-wider border-2 border-black bg-teal-400"
                                 type="button" onclick="incrementArt(2)">
                                 +
                             </button>
-                            <button id="likeArt2" class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+                            <button id="likeArt2" class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200 hover:border-red-500" type="button" aria-label="Like">
                                 <svg width="20" height="20" fill="currentColor" aria-hidden="true" class="hover:fill-sky-900" onclick="likeArt(2)">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                                 </svg>
@@ -198,11 +200,11 @@
                 </div>
                 <form class="flex-auto pl-6">
                     <div class="relative flex flex-wrap items-baseline pb-6 before:bg-sky-900 before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
-                        <h1 class="relative w-full flex-none mb-2 text-2xl font-semibold text-white">Retro Shoe</h1>
+                        <h1 class="relative w-full flex-none mb-2 text-2xl text-white">Fashion Jeans</h1>
                         <div class="relative text-lg text-white">
                             <span id="priceArt3">18500</span><span> FCFA</span>
                         </div>
-                        <div class="relative uppercase text-teal-400 ml-3">In stock</div>
+                        <div class="relative uppercase text-teal-400 ml-3">En stock</div>
                     </div>
                     <div class="flex items-baseline my-6">
                         <div class="space-x-3 flex text-sm font-medium">
@@ -244,7 +246,7 @@
                     </div>
                     <div class="flex space-x-2 mb-4 text-sm font-medium">
                         <div class="flex space-x-4">
-                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border border-slate-200 text-slate-900"
+                            <button class="px-6 h-10 w-auto uppercase tracking-wider border border-slate-200 text-slate-900"
                                 type="button" onclick="decrementArt(3)">
                                 -
                             </button>
@@ -254,11 +256,11 @@
                                     1
                                 </span>
                             </button>
-                            <button class="px-6 h-10 w-auto uppercase font-semibold tracking-wider border-2 border-black bg-teal-400"
+                            <button class="px-6 h-10 w-auto uppercase tracking-wider border-2 border-black bg-teal-400"
                                 type="button" onclick="incrementArt(3)">
                                 +
                             </button>
-                            <button id="likeArt3" class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+                            <button id="likeArt3" class="flex-none flex items-center justify-center w-10 h-10 rounded-md text-slate-300 border border-slate-200 hover:border-red-500" type="button" aria-label="Like">
                                 <svg width="20" height="20" fill="currentColor" aria-hidden="true" class="hover:fill-sky-900" onclick="likeArt(3)">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                                 </svg>
@@ -276,11 +278,30 @@
                 </form>
             </div>
         </div>
-        <div class="px-6">
-            <span>Votre Panier</span>
-            <span>
-                Total : <b id="total">83500</b><b> FCFA</b>
-            </span>
+        <div class="py-6 col-span-2 lg:w-72 h-auto">
+            <div class="bg-white px-6 pt-4 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+                <p class="pb-4"><b>TOTAL</b></p>
+                <hr class="pb-4">
+                <p>
+                    <b>Sous-total &rarr; </b><span id="total">83500</span><span> FCFA</span>
+                </p>
+                <div class="mx-auto max-w-md">
+                    <div class="divide-y divide-gray-300/50">
+                        <div class="pt-8 leading-7">
+                            <p class="text-gray-900 pb-4 text-left">Livraison standard en point relais.</p>
+                            <hr class="pb-4">
+                            <p class="text-center">
+                                <a href="" class="text-sky-500 hover:text-sky-600">
+                                    <span class="inline-flex items-center  bg-yellow-50 px-2 py-1 text-l font-medium text-yellow-800 
+                                    ring-1 ring-inset ring-yellow-600/20 shadow-sm shadow-yellow-500/40 hover:shadow-lg shadow-yellow-500/40">
+                                        Acheter maintenant &rarr;
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
