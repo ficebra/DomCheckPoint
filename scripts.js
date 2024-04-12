@@ -142,9 +142,10 @@ function removeArt(i){
     var dg;
     var totalOrder;
     var confirmation;
-
+    var sousTotalArt;
     if(i == 1){
 
+        sousTotalArt = parseInt(document.getElementById("priceArt"+i).textContent);
         confirmation = confirm("Voulez-vous vraiment supprimer l'article ?");
 
         if(confirmation){
@@ -152,11 +153,13 @@ function removeArt(i){
             dg = document.getElementById("detailArt"+i);
             dg.remove();
             totalOrder = parseInt(document.getElementById("total").textContent);
-            document.getElementById("total").textContent = totalOrder - 25000;
+            document.getElementById("total").textContent = totalOrder - sousTotalArt;
+
         }
     }
     if(i == 2){
 
+        sousTotalArt = parseInt(document.getElementById("priceArt"+i).textContent);
         confirmation = confirm("Voulez-vous vraiment supprimer l'article ?");
 
         if(confirmation){
@@ -164,11 +167,12 @@ function removeArt(i){
             dg = document.getElementById("detailArt"+i);
             dg.remove();
             totalOrder = parseInt(document.getElementById("total").textContent);
-            document.getElementById("total").textContent = totalOrder - 40000;
+            document.getElementById("total").textContent = totalOrder - sousTotalArt;
         }
     }
     if(i == 3){
 
+        sousTotalArt = parseInt(document.getElementById("priceArt"+i).textContent);
         confirmation = confirm("Voulez-vous vraiment supprimer l'article ?");
 
         if(confirmation){
@@ -176,7 +180,18 @@ function removeArt(i){
             dg = document.getElementById("detailArt"+i);
             dg.remove();
             totalOrder = parseInt(document.getElementById("total").textContent);
-            document.getElementById("total").textContent = totalOrder - 18500;
+            document.getElementById("total").textContent = totalOrder - sousTotalArt;
         }
+    }
+
+    var orderStatus = parseInt(document.getElementById("total").textContent);
+
+    if(orderStatus == 0){
+
+        var resumeAmount = document.getElementById("resumeAmount");
+        resumeAmount.remove();
+        
+        var cartArt = document.getElementById("cart");
+        cartArt.insertAdjacentHTML("afterend", '<div class="pt-8 font-mono text-center">Votre panier est vide. <a href="#" class="text-pink-500 hover:underline decoration-blue-400">Retour aux articles</a></div>');
     }
 }
