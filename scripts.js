@@ -1,3 +1,4 @@
+// fonction d'augmentation du nombre de l'article
 function incrementArt(i) {
     
     var dg;
@@ -40,6 +41,7 @@ function incrementArt(i) {
 
 }
 
+// fonction de reduction du nombre de l'article
 function decrementArt(i) {
     
     var dg;
@@ -87,6 +89,7 @@ function decrementArt(i) {
 
 }
 
+// fonction permettant d'aimer un article
 function likeArt(i) {
     
     var dg;
@@ -112,6 +115,7 @@ function likeArt(i) {
     }
 }
 
+// fonction permettant d'aimer un article
 function unLikeArt(i) {
 
     var dg;
@@ -137,12 +141,15 @@ function unLikeArt(i) {
     }
 }
 
+// fonction permettant de supprimer un article
 function removeArt(i){
 
     var dg;
     var totalOrder;
     var confirmation;
     var sousTotalArt;
+
+    // Premier article
     if(i == 1){
 
         sousTotalArt = parseInt(document.getElementById("priceArt"+i).textContent);
@@ -157,6 +164,8 @@ function removeArt(i){
 
         }
     }
+
+    // deuxieme article
     if(i == 2){
 
         sousTotalArt = parseInt(document.getElementById("priceArt"+i).textContent);
@@ -170,6 +179,8 @@ function removeArt(i){
             document.getElementById("total").textContent = totalOrder - sousTotalArt;
         }
     }
+    
+    // troisieme article
     if(i == 3){
 
         sousTotalArt = parseInt(document.getElementById("priceArt"+i).textContent);
@@ -184,8 +195,8 @@ function removeArt(i){
         }
     }
 
+    // affichage d'un message neutre apres suppression de tous les articles
     var orderStatus = parseInt(document.getElementById("total").textContent);
-
     if(orderStatus == 0){
 
         var resumeAmount = document.getElementById("resumeAmount");
